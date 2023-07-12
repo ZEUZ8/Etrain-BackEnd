@@ -43,7 +43,7 @@ const principalLogin = async (req, res) => {
             id: principal.id,
             role: "principal",
           },
-          "PrincipalTokenSecret",
+          process.env.PRINCIPALTOKEN,
           { expiresIn: "2d" }
         );
         res

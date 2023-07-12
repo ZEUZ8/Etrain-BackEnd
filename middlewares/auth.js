@@ -13,7 +13,7 @@ const verifyTokenAdmin = async (req, res, next) => {
       if (token.startsWith("Bearer ")) {
         token = token.slice(7, token.length).trimLeft();
       }
-      const verified = jwt.verify(token, "PrincipalTokenSecret");
+      const verified = jwt.verify(token, process.env.PRINCIPALTOKEN);
       req.user = verified;
       if (verified.role === "principal") {
         console.log("admin with token");
@@ -37,7 +37,7 @@ const verifyTokenTeacher = async (req, res, next) => {
       if (token.startsWith("Bearer ")) {
         token = token.slice(7, token.length).trimLeft();
       }
-      const verified = jwt.verify(token, "TeacherTokenSecret");
+      const verified = jwt.verify(token, process.env.TEACHERTOKEN);
       req.user = verified;
       if (verified.role === "teacher") {
         console.log("teacher with token");
@@ -64,7 +64,7 @@ const verifyStudent = async (req, res, next) => {
       if (token.startsWith("Bearer ")) {
         token = token.slice(7, token.length).trimLeft();
       }
-      const verified = jwt.verify(token, "StudentTokenSecret");
+      const verified = jwt.verify(token, process.env.STUDENTTOKEN);
       req.user = verified;
       if (verified.role === "student") {
         console.log("student with token");
