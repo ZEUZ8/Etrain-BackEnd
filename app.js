@@ -23,7 +23,7 @@ const mongoDB = require("./database/connection");
 const app = express()
 
 const corsOptions = {
-    origin: "http://localhost:3000",
+    origin: "https://etrainfrontend.onrender.com",
     credentials:true,
     optionSuccessStatus:200,
 };
