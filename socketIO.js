@@ -6,7 +6,7 @@ function socketConnection(server){
     console.log('socket Connection Calling'.bgYellow.white);
     const io = new Server(server,{
         cors :{
-            origin: "https://etrainfrontend.onrender.com",
+            origin: "https://main.d3gzftg01ima7.amplifyapp.com",
             methods:["GET","POST"],
         }
     })
