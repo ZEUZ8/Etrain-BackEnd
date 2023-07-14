@@ -7,7 +7,8 @@ function socketConnection(server){
     const io = new Server(server,{
         cors :{
             // origin: "https://main.d3gzftg01ima7.amplifyapp.com",
-            origin: "https://etrainfrontend.onrender.com",
+            // origin: "https://etrainfrontend.onrender.com",
+            origin: "https://main.d2p226zdkjksrz.amplifyapp.com/",
             // origin: "http://localhost:3000",
             methods:["GET","POST"],
         }
@@ -42,6 +43,7 @@ function socketConnection(server){
 
         //send and get message
         socket.on("sendMessage",({senderId,receiverId,text})=>{
+            console.log(senderId,receiverId,text,'the task')
             // const user = getUser(receiverId)
             // console.log(user?.socketId,user,'the user')
             // io.to(user?.socketId).emit("getMessage",{
@@ -50,6 +52,7 @@ function socketConnection(server){
             console.log('send messge')
             socket.to(123).emit("getMessage",{senderId,receiverId,text})
             socket.to(123).emit("getNotify",{receiverId,read:false,text})
+            console.log('after calling')
         })
 
         //when disconnect
