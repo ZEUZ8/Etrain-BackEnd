@@ -7,7 +7,8 @@ function socketConnection(server){
     const io = new Server(server,{
         cors :{
             // origin: "https://main.d3gzftg01ima7.amplifyapp.com",
-            origin: "http://localhost:3000",
+            origin: "https://etrainfrontend.onrender.com",
+            // origin: "http://localhost:3000",
             methods:["GET","POST"],
         }
     })
