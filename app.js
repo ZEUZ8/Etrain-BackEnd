@@ -23,7 +23,8 @@ const mongoDB = require("./database/connection");
 const app = express()
 
 const corsOptions = {
-    origin: "https://main.d3gzftg01ima7.amplifyapp.com",
+    // origin: "https://main.d3gzftg01ima7.amplifyapp.com",
+    origin: "http://localhost:3000",
     credentials:true,
     optionSuccessStatus:200,
 };
