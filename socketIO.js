@@ -9,8 +9,8 @@ function socketConnection(server){
             // origin: "https://main.d3gzftg01ima7.amplifyapp.com",
             // origin: "https://etrainfrontend.onrender.com",
             
-            // origin: "https://main.d2p226zdkjksrz.amplifyapp.com",
-            origin: "http://localhost:3000",
+            origin: "https://main.d2p226zdkjksrz.amplifyapp.com",
+            // origin: "http://localhost:3000",
             methods:["GET","POST"],
         }
     })
