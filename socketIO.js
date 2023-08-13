@@ -25,7 +25,7 @@ function socketConnection(server){
     const removeUser = (sockeId)=>{
         users = users.filter((user) => user.sockeId !== sockeId)
     }
-    const getUser = (userId)=>{
+    const getUser = (userId)=>{ 2
         return users.find((user)=>user.userId === userId)
     }
    
